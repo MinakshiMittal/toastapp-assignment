@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Blue Berry Avac Smoothi Bowl",
+      "image": "/images/BlueBerryAvacSmoothieBowl.png",
+      "price": 299
+    },
+    {
+      "id": 2,
+      "name": "Chocolate Bowl",
+      "image": "/images/ChocolateBowl.png",
+      "price": 299
+    },
+    {
+      "id": 3,
+      "name": "Johnnie Walker - Blue Label (1L)",
+      "image": "/images/JohnnieWalker.png",
+      "price": 18500
+    },
+    {
+      "id": 4,
+      "name": "Sunset Acai Bowl",
+      "image": "/images/SunsetAcaiBowl.png",
+      "price": 299
+    }
+  ]
+}
