@@ -16,7 +16,7 @@ export const Special = () => {
       dispatch(fetchProducts({ products: productsResponse }));
       setSpecialProducts(products.products);
     })();
-  }, [specialProducts]);
+  }, [specialProducts, products.products, dispatch]);
 
   return (
     <BaseLayout menuOption="Special">
