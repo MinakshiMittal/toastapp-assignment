@@ -18,7 +18,7 @@ export const MainNav = ({ menuOption }) => {
   };
 
   return (
-    <div className="pt-8 px-4 shadow-default rounded-b-xl bg-white">
+    <div className="pt-8 px-4 shadow-default rounded-b-xl bg-white-200">
       <div className="flex items-center justify-between ">
         <div className="flex items-center">
           <img src={Logo} alt="logo" className="w-8 h-8" />

@@ -9,7 +9,6 @@ const previousOrdersSlice = createSlice({
   initialState,
   reducers: {
     setPreviousOrders: (state, action) => {
-      console.log(action, "prev");
       state.previousOrders = action.payload.previousOrders;
     },
   },

@@ -20,7 +20,7 @@ export const BottomBar = () => {
   };
 
   return (
-    <div className="flex items-center fixed bottom-0 w-full px-8 py-4 bg-white-400">
+    <div className="flex items-center justify-center fixed bottom-0 w-full px-8 py-4 bg-white-100">
       <IconWithShadow
         src={BoltIcon}
         alt="bolt icon"

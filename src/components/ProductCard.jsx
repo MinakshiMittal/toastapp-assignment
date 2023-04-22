@@ -18,7 +18,6 @@ export const ProductCard = ({ product }) => {
 
   useEffect(() => {
     setCart(itemsInCart.itemsInCart);
-    console.log(itemsInCart.itemsInCart);
   }, [itemsInCart.itemsInCart]);
 
   const isItemInCart = () => {
@@ -26,7 +25,6 @@ export const ProductCard = ({ product }) => {
   };
 
   const handleDecrease = () => {
-    console.log("ko");
     const item = cart?.filter((item) => item.id === product.id)[0];
     if (item.quantity > 1) {
       dispatch(decreaseQuantity({ item: product }));
@@ -38,14 +36,14 @@ export const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="shadow-inner-default w-48 m-1 rounded-lg bg-white-300">
-      <img src={product.image} alt="product cover" className="w-48 h-32" />
+    <div className="shadow-inner-default rounded-lg bg-white-300 w-1/3 m-2">
+      <img src={product.image} alt="product cover" className="w-full h-32" />
       <div className="flex items-start m-2">
         <img src={VegIcon} alt="veg icon" className="mt-[2px] mr-1" />
         <p className="text-sm text-gray-200 font-medium">{product.name}</p>
       </div>
       <div className="flex items-center justify-between p-2">
-        <p className="text-sm text-gray-200 font-medium">₹ {product.price}</p>
+        <p className="text-sm text-gray-200 font-medium">₹{product.price}</p>
         {!isItemInCart() ? (
           <AddToCartButton
             onClick={() =>

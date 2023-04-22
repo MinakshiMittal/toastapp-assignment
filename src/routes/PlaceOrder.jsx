@@ -31,7 +31,6 @@ export const PlaceOrder = () => {
   const previousOrders = useSelector(previousOrdersSelector);
 
   const handleDecrease = (product) => {
-    console.log("ko");
     const item = itemsInCart.itemsInCart.filter(
       (item) => item.id === product.id
     )[0];
@@ -60,8 +59,8 @@ export const PlaceOrder = () => {
   };
 
   return (
-    <div className="">
-      <div className="py-7 px-2 pr-4 shadow-default rounded-b-xl bg-white">
+    <div className="bg-white-400 h-screen">
+      <div className="py-7 px-2 pr-4 shadow-default rounded-b-xl bg-white-100">
         <div className="flex items-center justify-between ">
           <div className="flex items-center">
             <IconWithShadow
@@ -86,7 +85,7 @@ export const PlaceOrder = () => {
           accordionOpen={currentOrderAccordionOpen}
         />
         {currentOrderAccordionOpen && (
-          <div className="shadow-inner-default m-2 px-2 py-4 my-4 rounded-xl">
+          <div className="shadow-inner-default m-2 px-2 py-4 my-4 rounded-xl bg-white-100">
             {itemsInCart.itemsInCart.map((item) => {
               return (
                 <div
@@ -129,7 +128,7 @@ export const PlaceOrder = () => {
           accordionOpen={previousOrderAccordionOpen}
         />
         {previousOrderAccordionOpen && (
-          <div className="shadow-inner-default m-2 px-2 py-4 my-4 rounded-xl">
+          <div className="shadow-inner-default m-2 px-2 py-4 my-4 rounded-xl bg-white-100">
             {previousOrders.previousOrders.map((item) => {
               return (
                 <div
