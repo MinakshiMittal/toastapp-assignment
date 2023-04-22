@@ -4,11 +4,21 @@ import { IconWithShadow } from "../elements";
 import TagIcon from "../assets/TagIcon.svg";
 import { menuOptions } from "../utils/constants";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const MainNav = () => {
-  const [activeTab, setActiveTab] = useState(menuOptions[0].name);
+export const MainNav = ({ menuOption }) => {
+  const [activeTab, setActiveTab] = useState(menuOption);
+  const navigate = useNavigate();
+
+  const handleClick = (option) => {
+    setActiveTab(option);
+    if (option === "Special" || option === "Main") {
+      navigate(`/${option.toLowerCase()}`);
+    }
+  };
+
   return (
-    <div className="pt-8 px-4 shadow-default rounded-b-xl bg-white-200">
+    <div className="pt-8 px-4 shadow-default rounded-b-xl bg-white">
       <div className="flex items-center justify-between ">
         <div className="flex items-center">
           <img src={Logo} alt="logo" className="w-8 h-8" />
@@ -34,7 +44,7 @@ export const MainNav = () => {
                     : "text-gray-100"
                 }`}
                 key={option.id}
-                onClick={() => setActiveTab(option.name)}
+                onClick={() => handleClick(option.name)}
               >
                 {option.name}
               </p>

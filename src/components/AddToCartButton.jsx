@@ -1,9 +1,16 @@
 import PlusIcon from "../assets/PlusIcon.svg";
 
-export const AddToCartButton = () => {
+export const AddToCartButton = ({ onClick }) => {
   return (
-    <button className="shadow-default flex items-center justify-center font-medium text-gray-200 text-sm p-1 rounded-xl bg-white-200">
-      <img src={PlusIcon} alt="add icon" className="p-2 shadow-inner-default rounded-full mr-2" />
+    <button
+      className="shadow-default flex items-center justify-center font-medium text-gray-200 text-sm p-1 rounded-xl bg-white-200"
+      onClick={onClick}
+    >
+      <img
+        src={PlusIcon}
+        alt="add icon"
+        className="p-2 shadow-inner-default rounded-full mr-2"
+      />
       ADD
     </button>
   );
