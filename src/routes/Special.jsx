@@ -9,7 +9,7 @@ import Welcome from "../assets/Welcome.png";
 export const Special = () => {
   const dispatch = useDispatch();
   const products = useSelector(productsSelector);
-  const [specialProducts, setSpecialProducts] = useState([]);
+  const [specialProducts, setSpecialProducts] = useState(products.products);
 
   useEffect(() => {
     (async () => {
