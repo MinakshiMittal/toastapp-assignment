@@ -7,7 +7,7 @@ import { apiFetchSpecialProducts } from "../services/apiFetchSpecialProducts";
 
 export const Main = () => {
   const products = useSelector(productsSelector);
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(products.products);
   const dispatch = useDispatch();
   const [accordionOpen, setAccordionOpen] = useState(true);
 
